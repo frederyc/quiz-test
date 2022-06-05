@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Answer, AnswerProps } from './components/Answer';
+import { Question, QuestionProps } from './components/Question';
+import LoremIpsum from 'react-lorem-ipsum';
+import { Assessment } from './components/Assessment';
+import { questions } from './fake_database/Database'
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Assessment id={1} text={'Geography'} questions={questions}/>
     </div>
   );
 }
